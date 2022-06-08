@@ -6,7 +6,7 @@ from selenium.webdriver import Chrome
 class View():
 
     def __init__(self, driver=None,options=None):
-        self.driver = webdriver.Remote(command_executor='http://172.17.0.1:4444/wd/hub', desired_capabilities=DesiredCapabilities.FIREFOX)
+        self.driver = webdriver.Remote(command_executor='http://172.17.0.1:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
         chromedriver_autoinstaller.install()
         options = webdriver.ChromeOptions()
         #options.set_headless = True
