@@ -9,7 +9,8 @@ class View():
         self.driver = webdriver.Remote(command_executor='http://172.17.0.1:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
         #chromedriver_autoinstaller.install()
         options = webdriver.ChromeOptions()
-        options.headless = True
+        options.set_headless = True
+        #options.headless = True
         self.driver = webdriver.Chrome(options=options)
     def setUp(self):
         self.driver.get("http://www.python.org")
